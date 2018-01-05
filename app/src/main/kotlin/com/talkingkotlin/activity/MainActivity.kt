@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
                 // shows the fragment (that shows episodes to the activity) if not showed already
                 var fragment = supportFragmentManager.findFragmentByTag(FRAGMENT_TAG)
                 if (fragment == null) {
+                    // FIXME 여기가 시작이구나
                     fragment = EpisodesFragment.newInstance(episodeTitle)
                     supportFragmentManager.beginTransaction()
                             .add(R.id.fragment_container, fragment, FRAGMENT_TAG)
