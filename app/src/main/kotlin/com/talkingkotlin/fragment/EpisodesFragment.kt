@@ -80,6 +80,7 @@ class EpisodesFragment : Fragment() {
 
             override fun setEpisodes(items: List<Item>) {
 
+                // episode fragment 에서넘어옴
                 val adapter: EpisodesAdapter? = recyclerView.adapter as EpisodesAdapter?
                 if (adapter == null) {
                     recyclerView.adapter = EpisodesAdapter(items) { item -> presenter.onItemTapped(context!!, item) }
